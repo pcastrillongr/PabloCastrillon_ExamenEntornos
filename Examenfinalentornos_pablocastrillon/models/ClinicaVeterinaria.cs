@@ -13,17 +13,18 @@ namespace Examenfinalentornos_pablocastrillon.models
 
         private List<Animal> animales;
 
-        public ClinicaVeterinaria() { }
+    
 
-        public ClinicaVeterinaria(List<Animal> animales)
+        public ClinicaVeterinaria()
         {
             this.animales = new List<Animal>();
+
         }
 
         public void insertarAnimal()
         {
 
-            this.animales = new List<Animal>();
+            
 
             Boolean cantaor = false;
             string especie;
@@ -212,7 +213,7 @@ namespace Examenfinalentornos_pablocastrillon.models
         public void ModificarComentarios()
         {
 
-            List<Animal> aux2 = this.animales;
+            
 
             string nombre;
 
@@ -221,7 +222,7 @@ namespace Examenfinalentornos_pablocastrillon.models
             string comentariosnuevos;
 
 
-            foreach (Animal x in aux2)
+            foreach (Animal x in animales)
             {
                 if (x.Nombre.Equals(nombre))
                 {
@@ -245,9 +246,9 @@ namespace Examenfinalentornos_pablocastrillon.models
       
         public void MostrarFichaAnimal()
         {
-            List<Animal> aux = this.animales;
+           
 
-            this.animales = new List<Animal>();
+           
             string nombre;
 
             Console.WriteLine("Introduzca el nombre del animal al que desea ver la ficha");
@@ -255,7 +256,7 @@ namespace Examenfinalentornos_pablocastrillon.models
 
 
            
-           foreach (Animal x2 in aux)
+           foreach (Animal x2 in animales)
                 {
                     if (x2.Nombre.Equals(nombre))
                     {
@@ -275,14 +276,14 @@ namespace Examenfinalentornos_pablocastrillon.models
         public void pesar()
         {
             
-            List<Animal> aux2 = this.animales;
+           
             string nombreaux;
 
             Console.WriteLine("Introduzca el nombre del animal que quiere saber su peso");
             nombreaux = Console.ReadLine();
 
 
-                foreach (Animal z in aux2)
+                foreach (Animal z in animales)
                 {
 
                     if (z.Nombre.Equals(nombreaux))
